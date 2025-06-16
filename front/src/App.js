@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 
 const fetchData = async () => {
-  let data = await fetch("https://swapi.dev/api/people/")
+  let data = await fetch("https://www.swapi.tech/api/people/")
     .then((res) => {
       return res.json();
     })
