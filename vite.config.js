@@ -6,13 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
-    proxy: {
-      '/api-sw': {
-        target: 'https://swapi.info/api',
-        changeOrigin: true,
-        rewrite: path => path.replace(/^\/api-sw/, ''),
-        secure: false,
-      },
-    },
+    port: 3000,
+    open: true, 
   },
 });
